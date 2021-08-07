@@ -7,9 +7,9 @@ export interface TaskProps {
     state: string;
     updatedAt: Date
   };
-  onArchiveTask: (id: String) => void;
+  onArchiveTask: (id: string) => void;
   
-  onPinTask: (id: String) => void;
+  onPinTask: (id: string) => void;
 }
 
 const Task: React.FC<TaskProps> = ({

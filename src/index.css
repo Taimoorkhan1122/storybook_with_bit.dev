@@ -238,7 +238,7 @@ html,
    font-style: 400;
    color: #333;
    font-size: 16px;
-   background-color: #26c6da;
+   background-color: #2c6cd2;
  }
  h1,
  h2,
@@ -348,7 +348,7 @@ html,
    height: 0.85em;
    transform: translate3d(-50%, -50%, 0);
    background: transparent;
-   box-shadow: #2cc5d2 0 0 0 1px inset;
+   box-shadow: #2c6cd2 0 0 0 1px inset;
    content: '';
    display: block;
  }
@@ -356,7 +356,7 @@ html,
    font-size: 16px;
    line-height: 24px;
    box-shadow: none;
-   color: #2cc5d2;
+   color: #2c6cd2;
    margin-top: -1px;
    font-family: 'percolate';
    speak: none;
@@ -389,7 +389,7 @@ html,
  }
  .input-symbol input:focus + [class^="icon-"],
  .input-symbol input:focus + [class*=" icon-"] {
-   color: #2cc5d2;
+   color: #2c6cd2;
  }
  .input-symbol [class^="icon-"],
  .input-symbol [class*=" icon-"] {
@@ -880,7 +880,7 @@ html,
    color: #eee;
  }
  .list-item .actions a:hover {
-   color: #2cc5d2;
+   color: #2c6cd2;
  }
  .list-item .actions a:active {
    color: #555;
@@ -892,7 +892,7 @@ html,
    text-align: center;
  }
  .list-item.TASK_PINNED .icon-star {
-   color: #2cc5d2;
+   color: #2c6cd2;
  }
  .list-item.TASK_ARCHIVED input[type="text"] {
    color: #aaa;
@@ -962,7 +962,7 @@ html,
  .wrapper-message [class*=" icon-"] {
    font-size: 48px;
    line-height: 56px;
-   color: #2cc5d2;
+   color: #2c6cd2;
    display: block;
  }
  .wrapper-message .title-message {
