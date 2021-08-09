@@ -1,22 +1,30 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Task from './Task';
-import { TaskProps } from './Task';
+import {  TaskState, taskStateReducer } from './taskSlice';
+import { RootState, AppDispatch } from '../redux/store';
 
-export interface TaskListProps extends Omit<TaskProps,'task'> {
+export interface TaskListProps {
   loading: Boolean;
-  tasks: TaskProps["task"][];
 }
 
-const Tasklist: React.FC<TaskListProps> = ({loading, tasks, onPinTask, onArchiveTask}) => {
-    const events = {
-        onPinTask,
-        onArchiveTask
-    }
+const Tasklist: React.FC = () => {
+   
+  const {tasks} = useSelector((state: RootState) => state.tasksList);
+  const dispatch: AppDispatch = useDispatch();
+  const loading = false;
+
+  const events = {
+    onPinTask: (id: string) =>
+      dispatch(taskStateReducer({ id, state: TaskState.TASK_PINNED })),
+    onArchiveTask: (id: string) =>
+      dispatch(taskStateReducer({ id, state: TaskState.TASK_ARCHIVED })),
+  };
 
     const tasksInOrder = [
-      ...tasks.filter((t) => t.state === "TASK_PINNED"),
-      ...tasks.filter((t) => t.state !== "TASK_PINNED"),
+      ...tasks.filter((t) => t.state === TaskState.TASK_PINNED),
+      ...tasks.filter((t) => t.state !== TaskState.TASK_PINNED),
     ];
     
     const LoadingRow = (

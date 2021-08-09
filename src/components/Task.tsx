@@ -1,11 +1,12 @@
 import React from "react";
+import { TaskState } from "./taskSlice";
 
 export interface TaskProps {
   task:  {
     id: string;
     title: string;
-    state: string;
-    updatedAt: Date
+    state: TaskState;
+    updatedAt: string
   };
   onArchiveTask: (id: string) => void;
   
@@ -20,9 +21,10 @@ const Task: React.FC<TaskProps> = ({
   return (
     <div className={`list-item ${state}`}>
       <label className="checkbox">
+        {console.log(state === TaskState.TASK_ARCHIVED)}
         <input
           type="checkbox"
-          defaultChecked={state === "TASK_ARCHIVED"}
+          checked={state === TaskState.TASK_ARCHIVED}
           disabled={true}
           name="checked"
         />
@@ -38,7 +40,7 @@ const Task: React.FC<TaskProps> = ({
       </div>
 
       <div className="actions" onClick={(event) => event.stopPropagation()}>
-        {state !== "TASK_ARCHIVED" && (
+        {state !== TaskState.TASK_ARCHIVED && (
           // eslint-disable-next-line jsx-a11y/anchor-is-valid
           <a onClick={() => onPinTask(id)}>
             <span className={`icon-star`} />
