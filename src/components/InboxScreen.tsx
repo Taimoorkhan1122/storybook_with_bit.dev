@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 import Tasklist from "./Tasklist";
 
-interface IProps {
+export interface IProps {
   error: string | null;
 }
 export const PureInboxScreen: React.FC<IProps> = ({ error }) => {
