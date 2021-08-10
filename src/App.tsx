@@ -11,7 +11,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <Tasklist />
+        <Tasklist loading={false} />
       </div>
     </Provider>
   );
