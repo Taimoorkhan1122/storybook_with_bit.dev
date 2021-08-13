@@ -71,5 +71,12 @@
   },
   "resolutions": {
     "babel-loader": "8.1.0"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react-typescript@4.0.0"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "yarn"
   }
 }

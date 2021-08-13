@@ -1,19 +1,20 @@
 import React from "react";
 import { Provider } from "react-redux";
 
-import { store } from "./redux/store";
-import Tasklist from "./components/Tasklist";
+import { store } from "./reduxer/store";
+import Tasklist from "./components/taskBox/Tasklist";
 import "./App.css";
-import { TaskState } from "./components/taskSlice";
-import { PureInboxScreen } from "./components/InboxScreen";
+import { TaskState } from "./components/taskBox/taskSlice";
+import { PureInboxScreen } from "./components/taskBox/InboxScreen";
+import TaskBox from "./components/taskBox";
 
 function App() {
-  
   return (
     <Provider store={store}>
       <div className="App">
         {/* <Tasklist loading={false} /> */}
-        <PureInboxScreen error={null}/>
+        {/* <PureInboxScreen error={null} /> */}
+        <TaskBox />
       </div>
     </Provider>
   );

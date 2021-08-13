@@ -1,13 +1,11 @@
 import react from "react";
 
-import {Tasklist, TaskListProps} from "../components/Tasklist";
+import {Tasklist, TaskListProps} from "../components/taskBox/Tasklist";
 import * as TaskStories from "./Task.stories";
 
 import { Meta, Story, storiesOf } from "@storybook/react";
-import { TaskState } from "../components/taskSlice";
-import ProviderWrapper from "../redux/ProviderWrapper";
-import { store } from "../redux/store";
-import { useSelector } from "react-redux";
+import { TaskState } from "../components/taskBox/taskSlice";
+
 
 export default {
   title: "TaskBox/tasklist",

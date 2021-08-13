@@ -3,9 +3,9 @@ import React from "react";
 import { action } from "@storybook/addon-actions";
 
 import * as TaskListStories from "./Taskslist.stories";
-import { IProps, PureInboxScreen } from "../components/InboxScreen";
+import { IProps, PureInboxScreen } from "../components/taskBox/InboxScreen";
 import { Provider } from "react-redux";
-import { store } from "../redux/store";
+import { store } from "../reduxer/store";
 
 // A super-simple mock of a redux store
 // const store = {

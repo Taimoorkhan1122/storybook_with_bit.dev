@@ -1,9 +1,9 @@
 import React from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
+import { connect} from "react-redux";
 
 import Task from "./Task";
 import { Payload, TaskState, taskStateReducer } from "./taskSlice";
-import { RootState, AppDispatch } from "../redux/store";
+import { RootState, AppDispatch } from "./redux/store";
 import { ThunkDispatch } from "redux-thunk";
 import { AnyAction } from "redux";
 
